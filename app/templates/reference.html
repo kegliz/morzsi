@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+<div class="container">
+  <div class="page-header">
+    <h1>Parameters</h1>
+  </div>
+  <form action="" method="post" name="reference">
+      {{ form.hidden_tag() }}
+        <p>
+          <label for="reference_id">Reference: </label>
+          {{ form.reference_id }} <br>
+          {% for error in form.reference_id.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+          {% endfor %}<br>
+        </p>
+      <p>
+          <label for="year">Which year: </label>
+          {{ form.year(size=6) }}<br>
+          {% for error in form.year.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+          {% endfor %}<br>
+      </p>
+      <p><input type="submit" value="Days?"></p>
+  </form>
+</div>
+{% endblock %}

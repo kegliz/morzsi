@@ -1,0 +1,46 @@
+{
+  "name": "air-datepicker",
+  "version": "2.2.0",
+  "authors": [
+    "t1m0n <t1m0n.tr@gmail.com>"
+  ],
+  "description": "A lightweight, customizable, powerful jQuery datepicker",
+  "main": [
+    "dist/js/datepicker.js",
+    "dist/css/datepicker.css"
+  ],
+  "keywords": [
+    "datepicker",
+    "timepicker",
+    "plugin",
+    "customizable",
+    "powerful"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "tasks",
+    "docs",
+    "page",
+    "package.json",
+    "gulpfile.js",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.0.0"
+  },
+  "homepage": "https://github.com/t1m0n/air-datepicker",
+  "_release": "2.2.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v2.2.0",
+    "commit": "e412c9cffe8346d901264455b0b8a57e9d634be5"
+  },
+  "_source": "https://github.com/t1m0n/air-datepicker.git",
+  "_target": "^2.2.0",
+  "_originalSource": "air-datepicker",
+  "_direct": true
+}

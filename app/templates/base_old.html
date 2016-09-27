@@ -1,0 +1,39 @@
+<html>
+  <head>
+    {% if title %}
+    <title>{{ title }} - MORZSI</title>
+    {% else %}
+    <title>MORZSI</title>
+    {% endif %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+      .container {
+        max-width: 500px;
+        padding-top: 100px;
+      }
+    </style>
+    <link rel="stylesheet" href="/static/tables.css" />
+    <link href="/static/bower_components/air-datepicker/dist/css/datepicker.min.css" rel="stylesheet" type="text/css">
+    <script src="/static/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/static/bower_components/air-datepicker/dist/js/datepicker.min.js"></script>
+
+    <!-- Include English language -->
+    <script src="/static/bower_components/air-datepicker/dist/js/i18n/datepicker.en.js"></script>
+
+  </head>
+  <body>
+    <div><a href="/index">Home</a> <a href="/reference">Reference</a> <a href="/create_kedves">Create</a></div>
+    <hr>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul>
+        {% for message in messages %}
+            <li>{{ message }} </li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+    {% block content %}{% endblock %}
+  </body>
+</html>

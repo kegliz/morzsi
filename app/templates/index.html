@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block page_content %}
+    <div class="container">
+      <div class="page-header">
+        <h1>Kedvesek and {{ref.name}} days in {{year}}:</h1>
+      </div>
+      <table class="gridtable">
+        <tr>
+          <th>Kedves</th>
+          <th>Date of birth</th>
+          <th>Days</th>
+        </tr>
+        {% for kedves in kedves_list %}
+        <tr>
+          <td>{{kedves.name}}</td>
+          <td>{{kedves.birth_date()}}</td>
+          <td>{{kedves.days_diff(ref,year)}}</td>
+          <td><a href="{{ url_for('main.edit_kedves', id=kedves.id) }}">edit</a></td>
+          <td><a href="{{ url_for('main.delete_kedves', id=kedves.id) }}">delete</a></td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+{% endblock %}
